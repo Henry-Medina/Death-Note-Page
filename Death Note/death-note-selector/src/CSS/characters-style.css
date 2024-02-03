@@ -1,0 +1,126 @@
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+main::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 80vw;
+  background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+main .personagem {
+  display: none;
+  height: 100vh;
+}
+
+main .personagem.selecionado {
+  display: block;
+}
+
+main .personagem .imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.conteudo {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 380px;
+  z-index: 2;
+}
+
+.conteudo .nome-personagem {
+  color: #ffffff;
+  font-size: 48px;
+  font-family: "Death";
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+  color: #ffffff;
+  font-family: "Rubik";
+  line-height: 24px;
+}
+
+.conteudo .logo {
+  background-image: url(../img/NicePng_death-note-ryuk-png_7831092.png);
+  background-size: cover;
+  height: 60px;
+  width: 240px;
+  margin-bottom: 35px;
+}
+
+.botoes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 180px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.botoes .botao {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.botoes .botao img {
+  max-width: 90px;
+  border-radius: 50%;
+}
+
+.botoes .selecionado {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
+
+.back-button {
+  background-image: linear-gradient(to bottom, #d70f0f, #771010);
+  color: rgb(246, 242, 242);
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Rubik';
+  cursor: pointer;
+  border-radius: 5px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: background-image 0.3s ease, text-shadow 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #771010;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to bottom, #771010, #d70f0f);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, background-image 0.3s ease, text-shadow 0.3s ease;
+}
+
+.back-button:active {
+  transform: translateY(0);
+}
